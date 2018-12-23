@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'react-phone-number-input/style.css'
 import { isValidPhoneNumber } from 'react-phone-number-input'
 import Phone from 'react-phone-number-input'
-import { Button, Label, Form } from 'reactstrap';
+import { Button, Label, Form, Alert } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 
@@ -24,9 +24,17 @@ class App extends Component {
         return (
           <div className="container">
             <Header />
+            <div>
+                <Alert color="success">
+                    <h3 className="alert-heading">Disclaimer</h3>
+                    <p>
+                        We do not collect your personal information. All information is stored on your device only.
+                    </p>
+                </Alert>
+            </div>
 	        <Form>
 	            <div className="form-group">
-	                <Label for="idPhone">Enter a number here and click on redirect</Label>
+	                <Label for="idPhone">Enter a number here and click on redirect to open in Whatsapp</Label>
     		        <Phone
     		            id="idPhone"
 	    		        placeholder="Enter phone number"
