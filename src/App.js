@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import 'react-phone-number-input/style.css'
 import { isValidPhoneNumber } from 'react-phone-number-input'
 import Phone from 'react-phone-number-input'
-import { Button, Label, Form, Alert } from 'reactstrap';
+import { Button, Label, Form } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
+import Footer from './Footer';
 
 class App extends Component {
     constructor(props) {
@@ -23,15 +24,13 @@ class App extends Component {
     render() {
         return (
           <div className="container">
-            <Header />
-            <div>
-                <Alert color="success">
-                    <h3 className="alert-heading">Disclaimer</h3>
-                    <p>
-                        We do not collect your personal information. All information is stored on your device only.
-                    </p>
-                </Alert>
-            </div>
+          <Header />
+					<div>
+						<h3>Contact via WhatsApp without saving contact number</h3>
+						<p>
+							Tired of saving numbers every time you want to whatsapp somebody? Say goodbye to saving contacts and use WhatsApp Number Opener to text any number you want
+						</p>
+					</div>
 	        <Form>
 	            <div className="form-group">
 	                <Label for="idPhone">Enter a number here and click on redirect to open in Whatsapp</Label>
@@ -45,6 +44,7 @@ class App extends Component {
 			        Redirect
 			    </Button>
 	        </Form>
+		<Footer />
           </div>
         );
     }
